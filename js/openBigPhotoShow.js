@@ -16,7 +16,6 @@ const caption = pictureBig.querySelector('.social__caption');
 const pictureBigcloseButton = document.querySelector('#picture-cancel');
 const body = document.body;
 
-// Убедитесь, что модальное окно скрыто при загрузке
 pictureBig.classList.add('hidden');
 
 // / создаю функцию где добавляю класс хидден,
