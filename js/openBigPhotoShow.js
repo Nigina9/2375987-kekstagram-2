@@ -19,7 +19,7 @@ const body = document.body;
 // Убедитесь, что модальное окно скрыто при загрузке
 pictureBig.classList.add('hidden');
 
-// / создаю функцию где добавляю класс хидден, чтоб показать фотку
+// / создаю функцию где добавляю класс хидден,
 const hidePictureBig = () => {
   // Закрываем модальное окно
   pictureBig.classList.add('hidden');
