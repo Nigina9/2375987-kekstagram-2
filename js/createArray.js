@@ -1,5 +1,12 @@
-import {descriptionProfile, messageProfile, nameProfile} from './data.js';
-import {randomInteger, getRandomInRange} from './util.js';
+import {
+  descriptionProfile,
+  messageProfile,
+  nameProfile
+} from './data.js';
+import {
+  randomInteger,
+  getRandomInRange
+} from './util.js';
 
 
 const minComment = 0;
@@ -16,7 +23,7 @@ const createComents = () => {
   for (let i = 0; i <= comentsRandom; i++) {
     comments.push({
       idComments: getRandomInRange(1, 80),
-      avatar: `img/avatar-${getRandomInRange(1,6)}.svg.`,
+      avatar: `img/avatar-${getRandomInRange(1, 6)}.svg`,
       message: messageProfile[randomMessage],
       name: nameProfile[randomName],
     });
@@ -24,15 +31,13 @@ const createComents = () => {
   return comments;
 };
 
-const createProfile = () => (
-  {
-    id: getRandomInRange(1, 25),
-    url: `photos/${getRandomInRange(1, 25)}.jpg`,
-    description: descriptionProfile[randomDescription],
-    likes: getRandomInRange(minLikes, maxLikes),
-    comments: createComents()
-  }
-);
+const createProfile = () => ({
+  id: getRandomInRange(1, 25),
+  url: `photos/${getRandomInRange(1, 25)}.jpg`,
+  description: descriptionProfile[randomDescription],
+  likes: getRandomInRange(minLikes, maxLikes),
+  comments: createComents()
+});
 
 const countNumber = 25;
 const createNewProfile = () => Array.from({
@@ -40,4 +45,6 @@ const createNewProfile = () => Array.from({
 }, createProfile);
 
 
-export {createNewProfile};
+export {
+  createNewProfile
+};
