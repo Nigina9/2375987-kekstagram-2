@@ -1,5 +1,14 @@
-import { isEscapeKey } from './util';
+import { isEscapeKey } from './util.js';
 import { clearValidator } from './form';
+
+import { form } from './form.js';
+import { pictureEffectInit, pictureEffectReset } from './effectsStyle.js';
+import { pictureScale, pictureScaleDefault } from './scalePictures.js';
+
+form();
+pictureEffectInit();
+pictureScale();
+
 const uploadImageModal = () => {
   const imgUploadInput = document.querySelector('.img-upload__input');
   const imgUploadOverlay = document.querySelector('.img-upload__overlay');
@@ -18,6 +27,7 @@ const uploadImageModal = () => {
   imgUploadInput.addEventListener('input', () => {
     imgUploadOverlay.classList.remove('hidden');
     document.body.classList.add('modal-open');
+    pictureEffectReset();
 
     document.addEventListener('keydown', onFormKeydown);
     imgUploadCancel.addEventListener('click', closeModal);
@@ -31,7 +41,10 @@ const uploadImageModal = () => {
     imgUploadCancel.removeEventListener('click', closeModal);
     document.querySelector('.img-upload__form').reset();
     clearValidator();
+    pictureScaleDefault();
   }
 };
 
-export { uploadImageModal };
+export {
+  uploadImageModal
+};
