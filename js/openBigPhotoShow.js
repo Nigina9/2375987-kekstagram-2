@@ -18,7 +18,6 @@ const body = document.body;
 
 pictureBig.classList.add('hidden');
 
-// / создаю функцию где добавляю класс хидден,
 const hidePictureBig = () => {
   // Закрываем модальное окно
   pictureBig.classList.add('hidden');
