@@ -1,5 +1,6 @@
 import {pictures} from './createThumbnail.js';
 import {openPicture} from './openBigPhotoShow.js';
+import { uploadImageModal } from './upload.js';
 
 pictures.addEventListener('click', (evt) => {
   const currentPicture = evt.target.closest('.picture');
@@ -7,3 +8,5 @@ pictures.addEventListener('click', (evt) => {
     openPicture(currentPicture.dataset.pictureId);
   }
 });
+
+uploadImageModal();
