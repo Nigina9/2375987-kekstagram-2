@@ -1,7 +1,7 @@
 
 import {createNewProfile} from './createArray.js';
 import { openPicture } from './openBigPhotoShow.js';
-// Ищем шаблон
+
 const POST_AMOUNT = 25;
 const pictureTemplate = document.querySelector('#picture').content.querySelector('.picture');
 const pictures = document.querySelector('.pictures');
